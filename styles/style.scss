@@ -24,6 +24,7 @@ $cardColor: #383838;
   h1 {
     color: $titleColor;
     font-size: 3rem;
+    text-align: center;
   }
 }
 @mixin flexbox($justify-content) {
@@ -42,7 +43,7 @@ nav {
   .logo {
     height: 10vh;
     h1 {
-      padding: 0 1rem;
+      padding-left: 2rem;
       height: 100%;
       display: flex;
       align-items: center;
@@ -82,6 +83,7 @@ nav {
 
 .burger {
   display: none;
+  margin-right: 2rem;
   cursor: pointer;
   div {
     width: 25px;
@@ -113,6 +115,12 @@ nav {
   }
   .burger {
     display: block;
+  }
+  .about-container {
+    flex-direction: column;
+    p {
+      margin-top: 2rem;
+    }
   }
 }
 .nav-active {
@@ -155,6 +163,7 @@ nav {
     h1 {
       color:white;
       font-size: 3.5rem;
+      text-align: center;
     }
   }
 }

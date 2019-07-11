@@ -29,7 +29,7 @@ nav .logo {
 }
 
 nav .logo h1 {
-  padding: 0 1rem;
+  padding-left: 2rem;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,6 +86,7 @@ nav ul li a::after {
 
 .burger {
   display: none;
+  margin-right: 2rem;
   cursor: pointer;
 }
 
@@ -131,6 +132,15 @@ nav ul li a::after {
   }
   .burger {
     display: block;
+  }
+  .about-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-container p {
+    margin-top: 2rem;
   }
 }
 
@@ -205,6 +215,7 @@ nav ul li a::after {
 #home h1 {
   color: #2C9DCA;
   font-size: 3rem;
+  text-align: center;
 }
 
 #home .black-filter {
@@ -225,6 +236,7 @@ nav ul li a::after {
 #home .black-filter h1 {
   color: white;
   font-size: 3.5rem;
+  text-align: center;
 }
 
 #about {
@@ -254,6 +266,7 @@ nav ul li a::after {
 #about h1 {
   color: #2C9DCA;
   font-size: 3rem;
+  text-align: center;
 }
 
 #about div {
@@ -309,6 +322,7 @@ nav ul li a::after {
 #work h1, #education h1 {
   color: #2C9DCA;
   font-size: 3rem;
+  text-align: center;
 }
 
 #projects {
@@ -335,6 +349,7 @@ nav ul li a::after {
 #projects h1 {
   color: #2C9DCA;
   font-size: 3rem;
+  text-align: center;
 }
 
 #contact {
@@ -365,6 +380,7 @@ nav ul li a::after {
 #contact h1 {
   color: #2C9DCA;
   font-size: 3rem;
+  text-align: center;
 }
 
 #contact ul {
