@@ -15,7 +15,7 @@ $cardColor: #383838;
 @mixin setSection() {
   @include flexbox(center);
   min-height: 100vh;
-  padding-top: 10vh;
+  // padding-top: 10vh;
   text-align: justify;
   background-color: $sectionColor;
   .headline {
@@ -161,7 +161,7 @@ nav {
   background-position:center;
   .black-filter {
     background-color: rgba(0, 12, 53, 0.6);
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     @include flexbox(center);
     h1 {
