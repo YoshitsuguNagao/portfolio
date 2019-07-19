@@ -249,6 +249,16 @@ a.active::after {
     padding-left: 1rem;
   }
 }
+
+.project-card {
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 300px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  background-color: $cardColor;
+  color: white;
+}
+
 footer {
   @include flexbox(center);
   font-size: 0.8rem;
