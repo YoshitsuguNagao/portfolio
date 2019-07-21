@@ -1,44 +1,13 @@
-$navColor: #09235f;
-$titleColor: #2C9DCA; //#E3065A
-// $navColor: #252542;
-$navColor: #05112A;
-$sectionColor: #121E36; // #EBEEF3,#F6F5F1
-$cardColor: #383838;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-@mixin setSection() {
-  @include flexbox(center);
-  min-height: 100vh;
-  // padding-top: 10vh;
-  text-align: justify;
-  background-color: $sectionColor;
-  .headline {
-    padding: 2rem 0 1rem;
-  }
-  h1 {
-    color: $titleColor;
-    font-size: 3rem;
-    text-align: center;
-  }
-}
-@mixin flexbox($justify-content) {
-  display: flex;
-  justify-content: $justify-content;
-  align-items: center;
-}
+@import "reset";
+@import "variables";
+@import "mixins";
 
 nav {
   width: 100%;
   @include flexbox(space-between);
   position: fixed;
   background-color: $navColor;
-  color: white;
+  color: $textColor;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
   .logo {
     height: 10vh;
@@ -62,7 +31,7 @@ nav {
       overflow: hidden;
       height: 25px;
       a {
-        color: white;
+        color: $textColor;
         text-decoration: none;
         position: relative;
         &::after{
@@ -165,7 +134,7 @@ nav {
     width: 100%;
     @include flexbox(center);
     h1 {
-      color:white;
+      color:$textColor;
       font-size: 3.5rem;
       text-align: center;
     }
@@ -186,28 +155,28 @@ nav {
   p {
     max-width: 500px;
     text-align: justify;
-    color: white;
+    color: $textColor;
   }
 }
 #work, #education {
   @include setSection();
   flex-direction: column;
-  color: white;
 }
 #projects {
   @include setSection();
-  color: white;
 }
 #contact {
   @include setSection();
   flex-direction: column;
-  color: white;
+  color: $textColor;
   ul {
     list-style: none;
   }
   a {
     text-decoration: none;
-    color: white;
+    color: $textColor;
+    display: flex;
+    align-items: center;
   }
   li {
     @include flexbox(center);
@@ -227,7 +196,7 @@ a.active::after {
   max-width: 700px;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
   background-color: $cardColor;
-  color: white;
+  color: $textColor;
   .title {
     display: flex;
     align-items: center;
@@ -248,20 +217,32 @@ a.active::after {
   ul {
     padding-left: 1rem;
   }
+  li {
+    margin: 0.75rem 0;
+  }
 }
 
 .project-card {
   margin: 1rem;
-  padding: 1rem;
   max-width: 300px;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
   background-color: $cardColor;
-  color: white;
+  color: $textColor;
+  img {
+    height:200px;
+  }
+  .project-content {
+    padding: 1rem;
+    a {
+      text-decoration: none;
+      color: $textColor;
+    }
+  }
 }
 
 footer {
   @include flexbox(center);
   font-size: 0.8rem;
   background-color: $navColor;
-  color: white;
+  color: $textColor;
 }
