@@ -1,9 +1,9 @@
 @mixin setSection() {
   min-height: 100vh;
-  text-align: justify;
+  // text-align: justify;
   background-color: $sectionColor;
   .headline {
-    padding: 2rem 0 1rem;
+    padding: 2rem 0;
   }
   h1 {
     color: $titleColor;
