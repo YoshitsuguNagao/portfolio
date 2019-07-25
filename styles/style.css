@@ -210,7 +210,7 @@ nav ul li a::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("../img/IMG_2752.JPG");
+  background-image: url("../img/background.JPG");
   background-size: cover;
   background-position: center;
 }
@@ -515,20 +515,49 @@ a.active::after {
 }
 
 .project-card .project-content p {
-  margin-bottom: 1rem;
-  opacity: 0;
-  -webkit-transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
-  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
   line-height: 1.3rem;
 }
 
 .project-card .project-content p:last-child {
-  text-align: end;
+  position: absolute;
+  bottom: 0.8rem;
+  right: 1rem;
 }
 
 .project-card .project-content h2 {
   margin: 1rem 0;
   text-align: center;
+}
+
+.project-card .project-content h3 {
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.project-card .project-content .hidden-content {
+  opacity: 0;
+  -webkit-transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+
+.project-card .project-content .technology {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.project-card .project-content .technology h5 {
+  background-color: white;
+  color: #383838;
+  margin: 0.2rem;
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.2rem;
 }
 
 .project-card:hover .project-content {
@@ -537,6 +566,10 @@ a.active::after {
 }
 
 .project-card:hover .project-content p {
+  opacity: 1;
+}
+
+.project-card:hover .project-content .hidden-content {
   opacity: 1;
 }
 
