@@ -6,6 +6,9 @@
   font-family: sans-serif;
 }
 
+/* ==============
+    Navbar Style
+   ============== */
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,24 +136,6 @@ nav ul li a::after {
   .burger {
     display: block;
   }
-  .about-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .about-container p {
-    margin: 2rem 2rem 0;
-  }
-  #projects {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 .nav-active {
@@ -198,6 +183,9 @@ nav ul li a::after {
           transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/* ===============
+    Section Style
+   =============== */
 #home {
   min-height: 100vh;
   background-color: #121E36;
@@ -393,14 +381,14 @@ nav ul li a::after {
 }
 
 #contact a {
-  text-decoration: none;
-  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: white;
+  text-decoration: none;
 }
 
 #contact li {
@@ -425,14 +413,32 @@ a.active::after {
           transform: translateX(0%);
 }
 
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #05112A;
+  color: white;
+  font-size: 0.8rem;
+}
+
+/* ============
+    Components
+   ============ */
 .experience-card {
+  background-color: #383838;
+  color: white;
   margin: 1rem 2.5rem;
   padding: 1rem;
   max-width: 700px;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-  background-color: #383838;
-  color: white;
 }
 
 .experience-card .title {
@@ -474,6 +480,10 @@ a.active::after {
   margin: 0.75rem 0;
 }
 
+.experience-card p {
+  line-height: 1.3rem;
+}
+
 .projects-pages {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,8 +499,8 @@ a.active::after {
 .project-card {
   width: 300px;
   height: 300px;
-  margin: 1rem;
   color: white;
+  margin: 1rem;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -577,18 +587,32 @@ a.active::after {
   opacity: 1;
 }
 
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #05112A;
-  color: white;
-  font-size: 0.8rem;
+/* ==================
+    Responsive Style
+   ================== */
+@media screen and (max-width: 768px) {
+  .about-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-container p {
+    margin: 2rem 2rem 0;
+  }
+  #projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */

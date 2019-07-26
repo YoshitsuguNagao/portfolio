@@ -2,6 +2,10 @@
 @import "variables";
 @import "mixins";
 
+/* ==============
+    Navbar Style
+   ============== */
+
 nav {
   @include flexbox(space-between,center);
   @include size(100%,10vh);
@@ -56,6 +60,7 @@ nav {
     transition: all 0.3s ease;
   }
 }
+
 @media screen and (max-width:768px) {
   body {
     overflow-x: hidden;
@@ -76,17 +81,8 @@ nav {
   .burger {
     display: block;
   }
-  .about-container {
-    flex-direction: column;
-    p {
-      margin: 2rem 2rem 0;
-    }
-  }
-  #projects {
-    display: flex;
-    flex-direction: column;
-  }
 }
+
 .nav-active {
   transform: translateX(-100%);
 }
@@ -114,6 +110,10 @@ nav {
   }
 }
 
+/* ===============
+    Section Style
+   =============== */
+
 #home  {
   @include setSection();
   @include flexbox(center,center);
@@ -131,6 +131,7 @@ nav {
     }
   }
 }
+
 #about {
   @include setSection();
   @include flexbox(center,center);
@@ -150,6 +151,7 @@ nav {
     text-align: justify;
   }
 }
+
 #work, #education {
   @include setSection();
   @include flexbox(center,center,column);
@@ -157,13 +159,13 @@ nav {
     color: white;
   }
 }
+
 #projects {
   @include setSection();
   @include flexbox(center,center);
   flex-direction: column;
-  // justify-content: space-between;
-  // width: 100%;
 }
+
 #contact {
   @include setSection();
   @include flexbox(center,center,column);
@@ -172,10 +174,9 @@ nav {
     list-style: none;
   }
   a {
-    text-decoration: none;
+    @include flexbox(null,center);
     color: $textColor;
-    display: flex;
-    align-items: center;
+    text-decoration: none;
   }
   li {
     @include flexbox(center,center);
@@ -185,20 +186,31 @@ nav {
     margin: 1rem;
   }
 }
+
 a.active::after {
   transform: translateX(0%);
 }
 
+footer {
+  @include flexbox(center,center);
+  background-color: $navColor;
+  color: $textColor;
+  font-size: 0.8rem;
+}
+
+/* ============
+    Components
+   ============ */
+
 .experience-card {
+  background-color: $cardColor;
+  color: $textColor;
   margin: 1rem 2.5rem;
   padding: 1rem;
   max-width: 700px;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-  background-color: $cardColor;
-  color: $textColor;
   .title {
-    display: flex;
-    align-items: center;
+    @include flexbox(null,center);
     margin-bottom: 1rem;
   }
   .year-city {
@@ -218,6 +230,9 @@ a.active::after {
   li {
     margin: 0.75rem 0;
   }
+  p {
+    line-height: 1.3rem;
+  }
 }
 
 .projects-pages {
@@ -225,10 +240,11 @@ a.active::after {
   @include size(100vw,100%);
   flex-wrap: wrap;
 }
+
 .project-card {
   @include size(300px,300px);
-  margin: 1rem;
   color: $textColor;
+  margin: 1rem;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
   overflow:hidden;
   .thumb {
@@ -290,9 +306,20 @@ a.active::after {
   }
 }
 
-footer {
-  @include flexbox(center,center);
-  background-color: $navColor;
-  color: $textColor;
-  font-size: 0.8rem;
+/* ==================
+    Responsive Style
+   ================== */
+
+@media screen and (max-width:768px) {
+  .about-container {
+    flex-direction: column;
+    p {
+      margin: 2rem 2rem 0;
+    }
+  }
+  #projects {
+    @include flexbox(space-around,center,column);
+  }
 }
+
+
