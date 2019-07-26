@@ -327,6 +327,10 @@ nav ul li a::after {
   text-align: center;
 }
 
+#work a, #education a {
+  color: white;
+}
+
 #projects {
   min-height: 100vh;
   background-color: #121E36;

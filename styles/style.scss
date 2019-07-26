@@ -86,11 +86,6 @@ nav {
     display: flex;
     flex-direction: column;
   }
-  .experience-card {
-    ul {
-      // display: none;
-    }
-  }
 }
 .nav-active {
   transform: translateX(-100%);
@@ -158,6 +153,9 @@ nav {
 #work, #education {
   @include setSection();
   @include flexbox(center,center,column);
+  a {
+    color: white;
+  }
 }
 #projects {
   @include setSection();
