@@ -17,6 +17,8 @@ santasNav();
 const navSlide = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
+  const main = document.querySelector('main');
+  const ul = document.querySelector('ul');
   const navLinks = document.querySelectorAll('.nav-links li');
   burger.addEventListener('click',() => {
     //Toggle Nav
@@ -32,6 +34,39 @@ const navSlide = () => {
     //Burger Animation
     burger.classList.toggle('toggle');
   })
+  main.addEventListener('click',() => {
+    if(nav.classList.value.includes("nav-active")) {
+      //Toggle Nav
+      nav.classList.toggle('nav-active');
+      //Animate Links
+      navLinks.forEach((link, index) => {
+        if(link.style.animation) {
+          link.style.animation = '';
+        } else {
+          link.style.animation = `navLinkFade 0.5s ease forwards ${index / 5 + 0.5}s`;
+        }
+      })
+      //Burger Animation
+      burger.classList.toggle('toggle');
+    }
+  })
+  ul.addEventListener('click',() => {
+    if(nav.classList.value.includes("nav-active")) {
+      //Toggle Nav
+      nav.classList.toggle('nav-active');
+      //Animate Links
+      navLinks.forEach((link, index) => {
+        if(link.style.animation) {
+          link.style.animation = '';
+        } else {
+          link.style.animation = `navLinkFade 0.5s ease forwards ${index / 5 + 0.5}s`;
+        }
+      })
+      //Burger Animation
+      burger.classList.toggle('toggle');
+    }
+  })
+
 }
 
 navSlide();
