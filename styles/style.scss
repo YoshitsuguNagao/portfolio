@@ -237,7 +237,7 @@ footer {
 
 .projects-pages {
   @include flexbox(space-around);
-  @include size(100vw,100%);
+  @include size(100%,100%);
   flex-wrap: wrap;
 }
 
