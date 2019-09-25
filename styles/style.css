@@ -19,7 +19,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 10vh;
   z-index: 100;
   background-color: #05112A;
@@ -230,7 +230,7 @@ nav ul li a::after {
 
 #home .black-filter h1 {
   color: white;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -434,7 +434,7 @@ footer {
 .experience-card {
   background-color: #383838;
   color: white;
-  margin: 1rem 2.5rem;
+  margin: 1rem 1.5rem;
   padding: 1rem;
   max-width: 700px;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
